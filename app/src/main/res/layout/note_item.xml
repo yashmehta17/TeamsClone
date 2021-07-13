@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="horizontal"
+        android:weightSum="8">
+
+        <TextView
+            android:id="@+id/taskTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name is yash mehta"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="8"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/priorityImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingRight="3dp"
+            android:src="@drawable/circle_red" />
+
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

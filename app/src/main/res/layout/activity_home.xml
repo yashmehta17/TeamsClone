@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawerLayout">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/materialToolBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                android:onClick="click"
+                app:navigationIcon="@drawable/menu"
+                app:title="Teams Clone" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <FrameLayout
+            android:id="@+id/fragmentFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomNavigationBar"
+            android:layout_below="@id/topAppBar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true">
+
+        </FrameLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:labelVisibilityMode="selected"
+            app:menu="@menu/bottom_menu" />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/webViewRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:background="#99000000"
+            android:gravity="bottom|center"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+
+            <ImageView
+                android:id="@+id/chatButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="setOpenChatButton"
+                android:padding="5dp"
+                android:src="@drawable/chat_white" />
+
+            <ImageView
+                android:id="@+id/toggleVideoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="setToggleVideoButton"
+                android:padding="4dp"
+                android:src="@drawable/videocam_enabled" />
+
+            <ImageView
+                android:id="@+id/toggleMicButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="setToggleMicButton"
+                android:padding="4dp"
+                android:src="@drawable/mic_enabled" />
+
+            <ImageView
+                android:id="@+id/callEndButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#EB0800"
+                android:onClick="setCallEndButton"
+                android:padding="4dp"
+                android:src="@drawable/call_end" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/incomingCallRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#606060"
+            android:orientation="vertical"
+            android:weightSum="8">
+
+            <TextView
+                android:id="@+id/incomingCallTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Someone is calling.."
+                android:layout_weight="7"
+                android:textSize="32sp"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:padding="8dp"
+                >
+
+                <ImageView
+                    android:id="@+id/incomingCallAccept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:background="#149802"
+                    android:onClick="setIncomingCallAccept"
+                    android:padding="4dp"
+                    android:src="@drawable/call_accept" />
+
+                <ImageView
+                    android:id="@+id/incomingCallReject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:background="#EB0800"
+                    android:onClick="setIncomingCallReject"
+                    android:padding="4dp"
+                    android:src="@drawable/call_end" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/leftNavigationView"
+        app:menu="@menu/left_menu"
+        app:headerLayout="@layout/left_nav_header"
+        android:layout_gravity="start"
+        />
+
+</androidx.drawerlayout.widget.DrawerLayout>
