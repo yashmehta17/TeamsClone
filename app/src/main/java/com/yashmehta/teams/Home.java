@@ -230,13 +230,13 @@ public class Home extends AppCompatActivity {
                                 break;
 
                             case R.id.githubRepositoryItem:
-                                Uri uriRepo = Uri.parse("https://github.com/yashmehta17/Teams-Clone");
+                                Uri uriRepo = Uri.parse("https://github.com/yashmehta17/TeamsClone");
                                 intent = new Intent(Intent.ACTION_VIEW, uriRepo);
                                 startActivity(intent);
                                 break;
 
                             case R.id.shareItem:
-                                Uri uri = Uri.parse("https://github.com/yashmehta17/Teams-Clone/tree/main/APK");
+                                Uri uri = Uri.parse("https://github.com/yashmehta17/TeamsClone/tree/master/APK");
                                 intent = new Intent(Intent.ACTION_VIEW, uri);
                                 startActivity(intent);
                                 break;
