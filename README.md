@@ -53,7 +53,7 @@ Download APK and install it in your android device: [Click here to download APK]
 
 ## Demo video
 
-Click to watch : [Demo Video]()
+Click to watch : [Demo Video](https://youtu.be/cSpnMCwCz6k)
 
 ## Documents
 
