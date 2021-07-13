@@ -8,7 +8,7 @@ A Microsoft Teams Clone developed for Microsoft Engage 2021.
 
 ### On android device
 
-Download APK and install it in your android device: [Click here to download APK]()
+Download APK and install it in your android device: [Click here to download APK](https://github.com/yashmehta17/TeamsClone/releases/tag/v1.0)
 
 ### To run on local system
 
